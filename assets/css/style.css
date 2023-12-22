@@ -1,0 +1,113 @@
+:root {
+    --Main_Color: rgb(0, 102, 0);
+    --Secondary_Color: rgb(5, 178, 1);
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+}
+
+body {
+    background-color: rgb(236, 255, 239);
+    margin-top: 60px;
+}
+
+
+header {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 60px;
+    background-image: url(../images/AdobeStock_416787721.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.Logo {
+    position: absolute;
+    top: 12.5px;
+    left: 20px;
+    height: 35px;
+}
+
+h1 {
+    position: absolute;
+    top: 12.5px;
+    left: 65px;
+    margin: 0;
+}
+
+nav {
+    position: absolute;
+    top: 22.5px;
+    right: 20px;
+}
+
+nav a {
+    color: black;
+    padding-left: 15px;
+}
+
+.Section_Head {
+    background-color: var(--Main_Color);
+    padding: 10px 10px 10px 15px;
+    border-top: 5px solid var(--Secondary_Color);
+    border-bottom: 5px solid var(--Secondary_Color);
+    color: white;
+    text-shadow: black 1px 1px 1px;
+}
+
+.Section_Content {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 1% 3%;
+}
+
+.Code_Tile {
+    text-align: center;
+    background-color: white;
+    border-radius: 15px;
+    margin: 10px;
+    box-shadow: 5px 5px 5px var(--Main_Color);
+    padding: 20px;
+}
+
+.Code_Tile:first-child {
+    padding: 20px 60px;
+}
+
+.Code_Tile img {
+    margin-top: 10px;
+    max-width: 300px;
+    max-height: 300px;
+}
+
+.Code_Tile:hover {
+    color: var(--Main_Color);
+    box-shadow: 1px 1px 3px var(--Main_Color);
+}
+
+.Code_Tile:visited h3 {
+    color: black;
+}
+
+.Code_Tile:hover h3 {
+    color: var(--Secondary_Color);
+}
+
+footer {
+    width: 100%;
+    background-image: url(../images/AdobeStock_416787721.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

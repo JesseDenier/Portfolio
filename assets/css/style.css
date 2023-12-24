@@ -9,6 +9,7 @@
     margin: 0;
     font-family: 'Roboto', sans-serif;
     text-decoration: none;
+    scroll-margin-top: 60px;
 }
 
 a:link {
@@ -23,7 +24,6 @@ body {
     background-color: rgb(236, 255, 239);
     margin-top: 60px;
 }
-
 
 header {
     position: fixed;
@@ -72,6 +72,11 @@ nav a {
     border-bottom: 5px solid var(--Secondary_Color);
     color: white;
     text-shadow: black 1px 1px 1px;
+}
+
+.About .Section_Content img {
+    max-width: 750px;
+    max-height: 750px;
 }
 
 .Section_Content {
@@ -135,4 +140,10 @@ footer {
     padding: 20px;
     font-weight: bolder;
     text-shadow: 1px 1px 1px white;
+}
+
+@media screen and (max-width: 1013px) {
+    nav {
+        display: none;
+    }
 }

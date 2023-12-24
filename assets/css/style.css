@@ -152,8 +152,8 @@ nav a {
     margin: 20px;
 }
 
-/* Allows images within flexbox to expand on hover. */
-.Section_Content_Images img:hover {
+/* Allows images within flexbox to expand on activation. */
+.Section_Content_Images img:active {
     transform: scale(2.5);
 }
 

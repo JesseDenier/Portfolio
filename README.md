@@ -1,4 +1,4 @@
-# Module-2-Challenge
+# Portfolio
 
 ## Description
 
@@ -10,7 +10,7 @@ N/A
 
 ## Usage
 
-Here is a link to the website: https://jessedenier.github.io/Module-2-Challenge/
+Here is a link to the website: https://jessedenier.github.io/Portfolio/
 This webpage can be opened and interacted with. All tiles can be clicked on to open different websites, and all images can be hovered over to increase their size.
 
 ## Credits

@@ -4,7 +4,7 @@
 
 This is the second challenge of the UT Coding Bootcamp. It is designed to test my ability to create an interactive website that works on all devices.
 Here is a screenshot from the completed site as of 1/4/24.
-! [Screenshot of Site](https://github.com/JesseDenier/Portfolio/assets/149531516/8e4dd59d-076c-43f7-ad1b-7b3a73f36355)
+![Screenshot of Site](https://github.com/JesseDenier/Portfolio/assets/149531516/8e4dd59d-076c-43f7-ad1b-7b3a73f36355)
 
 ## Installation
 

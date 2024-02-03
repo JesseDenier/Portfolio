@@ -1,218 +1,217 @@
 /* Stores repeatable values for future CSS. */
 :root {
-    --Main_Color: rgb(0, 102, 0);
-    --Secondary_Color: rgb(5, 178, 1);
+  --Main_Color: rgb(0, 102, 0);
+  --Secondary_Color: rgb(5, 178, 1);
 }
 
 /* Sets standards and adjusts hashtag links to work with fixed header. */
 * {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-    font-family: 'Roboto', sans-serif;
-    text-decoration: none;
-    scroll-margin-top: 60px;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  text-decoration: none;
+  scroll-margin-top: 60px;
 }
 
 /* Fixes default colors applied to links. */
 a:link {
-    color: black;
+  color: black;
 }
 
 /* Fixes default colors applied to links. */
 a:visited {
-    color: black;
+  color: black;
 }
 
 /* Sets background color and forces content below fixed header. */
 body {
-    background-color: rgb(236, 255, 239);
-    margin-top: 60px;
+  background-color: rgb(236, 255, 239);
+  margin-top: 60px;
 }
 
 /* Creates fixed green header at the top. */
 header {
-    position: fixed;
-    top: 0px;
-    left: 0px;
-    width: 100%;
-    height: 60px;
-    background-image: url(../images/AdobeStock_416787721.jpeg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 60px;
+  background-image: url(../images/AdobeStock_416787721.jpeg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 /* Sets size and position of fixed logo on green header. */
 .Logo {
-    position: absolute;
-    top: 12.5px;
-    left: 20px;
-    height: 35px;
+  position: absolute;
+  top: 12.5px;
+  left: 20px;
+  height: 35px;
 }
 
 /* Sets size and position of fixed title on green header. */
 h1 {
-    position: absolute;
-    top: 12.5px;
-    left: 65px;
-    margin: 0;
-    text-shadow: 1px 1px 1px white;
+  position: absolute;
+  top: 12.5px;
+  left: 65px;
+  margin: 0;
+  text-shadow: 1px 1px 1px white;
 }
 
 /* Sets size and position of navigation menu on green header. */
 nav {
-    position: absolute;
-    top: 22.5px;
-    right: 20px;
+  position: absolute;
+  top: 22.5px;
+  right: 20px;
 }
 
 /* Adds font options and extra spacing to navigation menu items. */
 nav a {
-    color: black;
-    padding-left: 15px;
-    font-weight: bolder;
-    text-shadow: 1px 1px 1px white;
+  color: black;
+  padding-left: 15px;
+  font-weight: bolder;
+  text-shadow: 1px 1px 1px white;
 }
 
 /* Creates green bars for section headers and applies text adjustments. */
 .Section_Head {
-    background-color: var(--Main_Color);
-    padding: 10px 10px 10px 15px;
-    border-top: 5px solid var(--Secondary_Color);
-    border-bottom: 5px solid var(--Secondary_Color);
-    color: white;
-    text-shadow: black 1px 1px 1px;
+  background-color: var(--Main_Color);
+  padding: 10px 10px 10px 15px;
+  border-top: 5px solid var(--Secondary_Color);
+  border-bottom: 5px solid var(--Secondary_Color);
+  color: white;
+  text-shadow: black 1px 1px 1px;
 }
 
 /* Allows the About Me image to be larger than all other images. */
 .About .Section_Content_Images img {
-    max-width: 750px;
-    max-height: 750px;
-    width: 100%;
+  max-width: 750px;
+  max-height: 750px;
+  width: 100%;
 }
 
 /* Prevents the About Me image from expanding on hover. */
 .About .Section_Content_Images img:hover {
-    transform: none;
+  transform: none;
 }
 
 /* Creates a centered flexbox for holding tiled content. */
 .Section_Content_Tiles {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: flex-start;
-    padding: 1% 3%;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 1% 3%;
 }
 
 /* Creates a repeatable white tile that content can be placed in. */
 .Code_Tile {
-    text-align: center;
-    background-color: white;
-    border-radius: 15px;
-    margin: 10px;
-    box-shadow: 5px 5px 5px var(--Main_Color);
-    padding: 20px;
+  text-align: center;
+  background-color: white;
+  border-radius: 15px;
+  margin: 10px;
+  box-shadow: 5px 5px 5px var(--Main_Color);
+  padding: 20px;
 }
 
 /* Forces the first tile to be larger than all other tiles. */
 .Code_Tile:first-child {
-    padding: 20px 60px;
+  padding: 20px 60px;
 }
 
 /* Forces the images within tiles to not be too large. */
 .Code_Tile img {
-    margin-top: 10px;
-    max-width: 300px;
-    max-height: 300px;
+  margin-top: 10px;
+  max-width: 300px;
+  max-height: 300px;
 }
 
 /* Changes color of text and shadow when hovering over tile. */
 .Code_Tile:hover {
-    color: var(--Secondary_Color);
-    box-shadow: 1px 1px 3px var(--Main_Color);
+  color: var(--Secondary_Color);
+  box-shadow: 1px 1px 3px var(--Main_Color);
 }
 
 /* Creates a centered flexbox for holding image content. */
 .Section_Content_Images {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: flex-start;
-    padding: 1% 3%;
-    text-align: center;
-    overflow: hidden;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 1% 3%;
+  text-align: center;
+  overflow: hidden;
 }
 
 /* Forces the images within flexbox to not be too large. */
 .Section_Content_Images img {
-    max-width: 240px;
-    max-height: 240px;
-    margin: 20px;
+  max-width: 240px;
+  max-height: 240px;
+  margin: 20px;
 }
 
 /* Allows images within flexbox to expand on hover. */
 /* To grader or others: Please contact me if you know how to keep image within viewport. */
 .Section_Content_Images img:hover {
-    transform: scale(2.5);
+  transform: scale(2.5);
 }
 
 /* Creates a green footer similar to the header. */
 footer {
-    width: 100%;
-    background-image: url(../images/AdobeStock_416787721.jpeg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    text-align: center;
-    padding: 20px;
-    font-weight: bolder;
-    text-shadow: 1px 1px 1px white;
+  width: 100%;
+  background-image: url(../images/AdobeStock_416787721.jpeg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  padding: 20px;
+  font-weight: bolder;
+  text-shadow: 1px 1px 1px white;
 }
 
 /* Solves the navigation menu hitting the title on small devices. */
 @media screen and (max-width: 1013px) {
-    nav {
-        display: none;
-    }
+  nav {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 576px) {
+  /* Forces there to still be 2 columns of tiles and images on small devices. */
+  .Code_Tile {
+    padding: 10px;
+  }
 
-    /* Forces there to still be 2 columns of tiles and images on small devices. */
-    .Code_Tile {
-        padding: 10px;
-    }
+  .Code_Tile:first-child {
+    padding: 10px 30px;
+  }
 
-    .Code_Tile:first-child {
-        padding: 10px 30px;
-    }
+  .Code_Tile h3 {
+    font-size: 16px;
+  }
 
-    .Code_Tile h3 {
-        font-size: 16px;
-    }
+  .Code_Tile img {
+    margin-top: 10px;
+    max-width: 180px;
+    max-height: 180px;
+  }
 
-    .Code_Tile img {
-        margin-top: 10px;
-        max-width: 180px;
-        max-height: 180px;
-    }
+  .Section_Content_Images img {
+    max-width: 130px;
+    max-height: 130px;
+    margin: 10px;
+  }
 
-    .Section_Content_Images img {
-        max-width: 130px;
-        max-height: 130px;
-        margin: 10px;
-    }
+  /* Shrinks text on small devices so it doesn't take up too much room. */
+  h1 {
+    font-size: clamp(20px, 6.5vw, 32px);
+  }
 
-    /* Shrinks text on small devices so it doesn't take up too much room. */
-    h1 {
-        font-size: clamp(20px, 6.5vw, 32px);
-    }
-
-    .Section_Head {
-        font-size: 12px;
-    }
+  .Section_Head {
+    font-size: 12px;
+  }
 }

@@ -117,15 +117,9 @@ nav a {
   padding: 20px;
 }
 
-/* Forces the first tile to be larger than all other tiles. */
-.Code_Tile:first-child {
-  padding: 20px 60px;
-}
-
 /* Forces the images within tiles to not be too large. */
 .Code_Tile img {
   margin-top: 10px;
-  max-width: 300px;
   max-height: 300px;
 }
 

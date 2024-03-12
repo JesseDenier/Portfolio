@@ -49,7 +49,7 @@ body {
   justify-content: center;
   text-align: center;
   align-items: flex-start;
-  padding: 30px;
+  padding: 30px clamp(5px, 3%, 30px) 30px clamp(5px, 3%, 30px);
 }
 
 /* A rounded card that content can be placed in. */
@@ -223,9 +223,8 @@ footer {
     max-height: 180px;
   }
 
-  .unexpandedImage {
-    max-width: 130px;
-    max-height: 130px;
-    margin: 10px;
+  .unexpandedImageContainer {
+    width: 125px;
+    height: 125px;
   }
 }

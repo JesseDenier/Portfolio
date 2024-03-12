@@ -2,7 +2,8 @@
 /* Stores repeatable values for future CSS. */
 :root {
   --Main_Color: rgb(0, 102, 0);
-  --Secondary_Color: rgb(5, 178, 1);
+  --Secondary_Color: rgb(51, 153, 51);
+  --Background_Color: rgb(216, 229, 216);
 }
 
 /*! NORMALIZATION */
@@ -25,12 +26,12 @@ a:visited {
 
 /* Sets background color and forces content below fixed header. */
 body {
-  background-color: rgb(236, 255, 239);
+  background-color: var(--Background_Color);
   margin-top: 60px;
 }
 
 /*! REPEATED ASSETS */
-/* Creates green bars for section headers and applies text adjustments. */
+/* Creates bars for section headers and applies text adjustments. */
 .sectionHead {
   background-color: var(--Main_Color);
   padding: 10px 10px 10px 15px;
@@ -51,7 +52,7 @@ body {
   padding: 30px;
 }
 
-/* A rounded white card that content can be placed in. */
+/* A rounded card that content can be placed in. */
 .card {
   text-align: center;
   background-color: white;
@@ -64,7 +65,7 @@ body {
 /* Forces the images within cards to not be too large. */
 .card img {
   margin-top: 10px;
-  max-height: 300px;
+  max-height: 200px;
 }
 
 /* Changes color of text and shadow when hovering over card. */
@@ -73,13 +74,22 @@ body {
   box-shadow: 1px 1px 3px var(--Main_Color);
 }
 
-/* Forces the images to not be too large. */
-.unexpandedImage {
-  max-width: 240px;
-  max-height: 240px;
-  margin: 20px;
-  cursor: pointer; /* Add cursor pointer to indicate clickable */
+/*! */
+.unexpandedImageContainer {
+  width: 250px;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
+.unexpandedImageContainer img {
+  max-width: 90%;
+  max-height: 90%;
+  cursor: pointer;
+}
+
+/*! */
 
 .expandedImageModal {
   position: fixed;
@@ -87,21 +97,16 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(
-    255,
-    255,
-    255,
-    0.8
-  ); /* Semi-transparent black background */
+  background-color: rgba(255, 255, 255, 0.8);
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 999; /* Ensure the modal is on top of other elements */
+  z-index: 999;
 }
 
 .expandedImageModal img {
-  max-width: 90%; /* Adjust as needed */
-  max-height: 90%; /* Adjust as needed */
+  max-width: 90%;
+  max-height: 90%;
 }
 
 /*! HEADER */
@@ -166,7 +171,7 @@ nav a {
 }
 
 /*! FOOTER */
-/* Creates a green footer similar to the header. */
+/* Creates a footer similar to the header. */
 footer {
   width: 100%;
   background-image: url(../images/AdobeStock_416787721.jpeg);

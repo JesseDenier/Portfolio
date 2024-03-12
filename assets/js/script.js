@@ -1,5 +1,6 @@
+//! IMAGE EXPANSION
 // Get all the images in the section
-var images = document.querySelectorAll(".unexpandedImage");
+var images = document.querySelectorAll(".unexpandedImageContainer img");
 
 // Add click event listener to each image
 images.forEach(function (image) {

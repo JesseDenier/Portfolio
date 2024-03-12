@@ -55,15 +55,24 @@ body {
 /* A rounded card that content can be placed in. */
 .card {
   text-align: center;
-  background-color: white;
-  border-radius: 15px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 10px;
   margin: 10px;
-  box-shadow: 5px 5px 5px var(--Main_Color);
   padding: 20px;
+  box-shadow: 1px 1px 3px var(--Main_Color);
+}
+
+.card h3 {
+  font-size: 18px;
 }
 
 /* Forces the images within cards to not be too large. */
 .card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto; /* Center align */
   margin-top: 10px;
   max-height: 200px;
 }
@@ -71,7 +80,9 @@ body {
 /* Changes color of text and shadow when hovering over card. */
 .card:hover {
   color: var(--Secondary_Color);
-  box-shadow: 1px 1px 3px var(--Main_Color);
+  box-shadow: 4px 5px 5px var(--Main_Color);
+  transform: translateY(-5px);
+  transition: transform 0.3s ease;
 }
 
 .unexpandedImageContainer {
@@ -86,6 +97,12 @@ body {
   max-width: 90%;
   max-height: 90%;
   cursor: pointer;
+}
+
+.unexpandedImageContainer img:hover {
+  transform: translateY(-5px);
+  transition: transform 0.3s ease;
+  box-shadow: 4px 5px 5px var(--Main_Color);
 }
 
 .expandedImageModal {
@@ -270,7 +287,7 @@ footer {
   }
 
   .card {
-    padding: 10px;
+    padding: 15px;
   }
 
   .card h3 {

@@ -232,7 +232,7 @@ footer {
   /* Sets the navigation to hidden and vertical */
   .nav {
     position: fixed;
-    top: 80px;
+    top: 70px;
     left: 0px;
     background-color: var(--Main_Color);
     border-bottom: 5px solid var(--Secondary_Color);
@@ -246,6 +246,7 @@ footer {
     align-items: center;
     row-gap: 10px;
     margin: 0;
+    color: white;
   }
 
   /* Shows the hamburger icon. */
@@ -257,8 +258,8 @@ footer {
 @media screen and (max-width: 576px) {
   /*! HEADER */
   /* Shrinks text on small devices so it doesn't take up too much room. */
-  h1 {
-    font-size: clamp(20px, 6.5vw, 32px);
+  .logoName {
+    font-size: clamp(16px, 5vw, 30px);
   }
 
   /*! REPEATED ASSETS */

@@ -1,47 +1,26 @@
+/*! ROOT */
 /* Stores repeatable values for future CSS. */
 :root {
   --Main_Color: rgb(0, 102, 0);
   --Secondary_Color: rgb(5, 178, 1);
 }
 
-/*! CHAT GPT*/
-.modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 999; /* Ensure the modal is on top of other elements */
-}
-
-.modal img {
-  max-width: 90%; /* Adjust as needed */
-  max-height: 90%; /* Adjust as needed */
-}
-/*! CHAT GPT*/
-
-/* Sets standards and adjusts hashtag links to work with fixed header. */
+/*! NORMALIZATION */
+/* Zeroes out padding and margin. + Sets a custom font. + Adjusts hashtag scrolling for fixed header. */
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
   font-family: "Roboto", sans-serif;
-  text-decoration: none;
-  scroll-margin-top: 60px;
+  scroll-margin-top: 59px;
 }
 
-/* Fixes default colors applied to links. */
-a:link {
-  color: black;
-}
-
-/* Fixes default colors applied to links. */
+/* Fixes default colors and effects applied to links. */
+a,
+a:link,
 a:visited {
-  color: black;
+  color: inherit;
+  text-decoration: none;
 }
 
 /* Sets background color and forces content below fixed header. */
@@ -50,28 +29,105 @@ body {
   margin-top: 60px;
 }
 
-/* Creates fixed green header at the top. */
+/*! REPEATED ASSETS */
+/* Creates green bars for section headers and applies text adjustments. */
+.sectionHead {
+  background-color: var(--Main_Color);
+  padding: 10px 10px 10px 15px;
+  border-top: 5px solid var(--Secondary_Color);
+  border-bottom: 5px solid var(--Secondary_Color);
+  color: white;
+  text-shadow: black 1px 1px 1px;
+}
+
+/* A parent item that centers all content within it. */
+.flexContainerCenter {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  align-items: flex-start;
+  padding: 30px;
+}
+
+/* A rounded white card that content can be placed in. */
+.card {
+  text-align: center;
+  background-color: white;
+  border-radius: 15px;
+  margin: 10px;
+  box-shadow: 5px 5px 5px var(--Main_Color);
+  padding: 20px;
+}
+
+/* Forces the images within cards to not be too large. */
+.card img {
+  margin-top: 10px;
+  max-height: 300px;
+}
+
+/* Changes color of text and shadow when hovering over card. */
+.card:hover {
+  color: var(--Secondary_Color);
+  box-shadow: 1px 1px 3px var(--Main_Color);
+}
+
+/* Forces the images to not be too large. */
+.unexpandedImage {
+  max-width: 240px;
+  max-height: 240px;
+  margin: 20px;
+  cursor: pointer; /* Add cursor pointer to indicate clickable */
+}
+
+.expandedImageModal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.8
+  ); /* Semi-transparent black background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999; /* Ensure the modal is on top of other elements */
+}
+
+.expandedImageModal img {
+  max-width: 90%; /* Adjust as needed */
+  max-height: 90%; /* Adjust as needed */
+}
+
+/*! HEADER */
+/* Creates fixed header at the top. */
 header {
   position: fixed;
   top: 0px;
   left: 0px;
   width: 100%;
-  height: 60px;
+  height: 65px;
   background-image: url(../images/AdobeStock_416787721.jpeg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  border-bottom: solid 5px var(--Main_Color);
 }
 
-/* Sets size and position of fixed logo on green header. */
-.Logo {
+/* Sets size and position of fixed logo on header. */
+.logo {
   position: absolute;
   top: 12.5px;
   left: 20px;
   height: 35px;
 }
 
-/* Sets size and position of fixed title on green header. */
+/* Sets size and position of fixed title on header. */
 h1 {
   position: absolute;
   top: 12.5px;
@@ -80,7 +136,7 @@ h1 {
   text-shadow: 1px 1px 1px white;
 }
 
-/* Sets size and position of navigation menu on green header. */
+/* Sets size and position of navigation menu on header. */
 nav {
   position: absolute;
   top: 22.5px;
@@ -95,75 +151,21 @@ nav a {
   text-shadow: 1px 1px 1px white;
 }
 
-/* Creates green bars for section headers and applies text adjustments. */
-.Section_Head {
-  background-color: var(--Main_Color);
-  padding: 10px 10px 10px 15px;
-  border-top: 5px solid var(--Secondary_Color);
-  border-bottom: 5px solid var(--Secondary_Color);
-  color: white;
-  text-shadow: black 1px 1px 1px;
-}
-
+/*! ABOUT */
 /* Allows the About Me image to be larger than all other images. */
-.About .Section_Content_Images img {
+.aboutImage {
+  width: 100%;
   max-width: 750px;
-  max-height: 750px;
-  width: 100%;
 }
 
-/* Creates a centered flexbox for holding tiled content. */
-.Section_Content_Tiles {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: flex-start;
-  padding: 1% 3%;
-}
-
-/* Creates a repeatable white tile that content can be placed in. */
-.Code_Tile {
+.aboutText {
+  max-width: 750px;
   text-align: center;
-  background-color: white;
-  border-radius: 15px;
-  margin: 10px;
-  box-shadow: 5px 5px 5px var(--Main_Color);
-  padding: 20px;
+  margin: auto;
+  padding: 0px 30px 30px 30px;
 }
 
-/* Forces the images within tiles to not be too large. */
-.Code_Tile img {
-  margin-top: 10px;
-  max-height: 300px;
-}
-
-/* Changes color of text and shadow when hovering over tile. */
-.Code_Tile:hover {
-  color: var(--Secondary_Color);
-  box-shadow: 1px 1px 3px var(--Main_Color);
-}
-
-/* Creates a centered flexbox for holding image content. */
-.Section_Content_Images {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: flex-start;
-  padding: 1% 3%;
-  text-align: center;
-  overflow: hidden;
-}
-
-/* Forces the images within flexbox to not be too large. */
-.Section_Content_Images img {
-  max-width: 240px;
-  max-height: 240px;
-  margin: 20px;
-  cursor: pointer; /* Add cursor pointer to indicate clickable */
-}
-
+/*! FOOTER */
 /* Creates a green footer similar to the header. */
 footer {
   width: 100%;
@@ -179,43 +181,46 @@ footer {
 
 /* Solves the navigation menu hitting the title on small devices. */
 @media screen and (max-width: 1013px) {
+  /*! HEADER */
   nav {
     display: none;
   }
 }
 
 @media screen and (max-width: 576px) {
-  /* Forces there to still be 2 columns of tiles and images on small devices. */
-  .Code_Tile {
-    padding: 10px;
-  }
-
-  .Code_Tile:first-child {
-    padding: 10px 30px;
-  }
-
-  .Code_Tile h3 {
-    font-size: 16px;
-  }
-
-  .Code_Tile img {
-    margin-top: 10px;
-    max-width: 180px;
-    max-height: 180px;
-  }
-
-  .Section_Content_Images img {
-    max-width: 130px;
-    max-height: 130px;
-    margin: 10px;
-  }
-
+  /*! HEADER */
   /* Shrinks text on small devices so it doesn't take up too much room. */
   h1 {
     font-size: clamp(20px, 6.5vw, 32px);
   }
 
-  .Section_Head {
+  /*! REPEATED ASSETS */
+  /* Forces there to still be 2 columns of tiles and images on small devices. */
+  .sectionHead {
     font-size: 12px;
+  }
+
+  .card {
+    padding: 10px;
+  }
+
+  .card:first-child {
+    padding: 10px 30px;
+  }
+
+  .card h3 {
+    font-size: 16px;
+  }
+
+  .card img {
+    margin-top: 10px;
+    max-width: 180px;
+    max-height: 180px;
+  }
+
+  .unexpandedImage {
+    max-width: 130px;
+    max-height: 130px;
+    margin: 10px;
   }
 }

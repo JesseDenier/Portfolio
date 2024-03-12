@@ -1,5 +1,5 @@
 // Get all the images in the section
-var images = document.querySelectorAll(".Section_Content_Images img");
+var images = document.querySelectorAll(".unexpandedImage");
 
 // Add click event listener to each image
 images.forEach(function (image) {
@@ -11,7 +11,7 @@ images.forEach(function (image) {
 function expandImage(image) {
   // Create a modal element
   var modal = document.createElement("div");
-  modal.className = "modal";
+  modal.className = "expandedImageModal";
 
   // Create an image element inside the modal
   var modalImg = document.createElement("img");

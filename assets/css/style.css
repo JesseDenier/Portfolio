@@ -13,7 +13,7 @@
   padding: 0;
   margin: 0;
   font-family: "Roboto", sans-serif;
-  scroll-margin-top: 59px;
+  scroll-margin-top: 69px;
 }
 
 /* Fixes default colors and effects applied to links. */
@@ -74,7 +74,6 @@ body {
   box-shadow: 1px 1px 3px var(--Main_Color);
 }
 
-/*! */
 .unexpandedImageContainer {
   width: 250px;
   height: 250px;
@@ -88,8 +87,6 @@ body {
   max-height: 90%;
   cursor: pointer;
 }
-
-/*! */
 
 .expandedImageModal {
   position: fixed;
@@ -110,50 +107,78 @@ body {
 }
 
 /*! HEADER */
-/* Creates fixed header at the top. */
-header {
-  position: fixed;
-  top: 0px;
-  left: 0px;
-  width: 100%;
-  height: 65px;
+/* Creates a fixed header */
+.header {
   background-image: url(../images/AdobeStock_416787721.jpeg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  border-bottom: solid 5px var(--Main_Color);
+  border-bottom: 5px solid var(--Main_Color);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
 }
 
-/* Sets size and position of fixed logo on header. */
+/* Builds a horizontal flex blox seperating the logo area and the nav bar area. */
+.headerContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 3%;
+  height: 70px;
+}
+
+/* Builds a horizontal flex box for the logo and the company name. */
 .logo {
-  position: absolute;
-  top: 12.5px;
-  left: 20px;
-  height: 35px;
+  display: flex;
+  column-gap: 10px;
+  align-items: center;
 }
 
-/* Sets size and position of fixed title on header. */
-h1 {
-  position: absolute;
-  top: 12.5px;
-  left: 65px;
-  margin: 0;
-  text-shadow: 1px 1px 1px white;
+/* Sets the position and size of the static logo on the header. */
+.logoImage {
+  width: 35px;
 }
 
-/* Sets size and position of navigation menu on header. */
-nav {
-  position: absolute;
-  top: 22.5px;
-  right: 20px;
+/* Sets the position and style of the static title on the header. */
+.logoName {
+  font-size: 30px;
+  letter-spacing: 1.5px;
+  transition: all 0.25s;
 }
 
-/* Adds font options and extra spacing to navigation menu items. */
-nav a {
+/* Displays the navItems nicely without default styles. */
+.navList {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  column-gap: 20px;
+}
+
+/* Sets the navLinks to a nice color and size, and allows them to shift to grey on hover nicely. */
+.navLink {
   color: black;
-  padding-left: 15px;
-  font-weight: bolder;
-  text-shadow: 1px 1px 1px white;
+  font-size: 16px;
+  transition: all 0.5s;
+}
+.navLink:hover {
+  color: darkgray;
+}
+
+/* Sets a "hidden" hamburger menu icon that shows as clickable. */
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+/* Creates thin bars that transition nicely. */
+.hamburgerBar {
+  height: 2px;
+  width: 27px;
+  background: black;
+  margin: 5px 0;
+  transition: all 0.5s;
 }
 
 /*! ABOUT */
@@ -185,10 +210,47 @@ footer {
 }
 
 /* Solves the navigation menu hitting the title on small devices. */
-@media screen and (max-width: 1013px) {
-  /*! HEADER */
-  nav {
-    display: none;
+@media screen and (max-width: 1050px) {
+  /* Adds extra classes that can be called by the javascript based on user inputs.*/
+  .nav--open {
+    visibility: visible !important;
+    opacity: 1 !important;
+    transition: all 0.5s !important;
+  }
+
+  /* Hides one and spins the other 2 hamburger bars to make an X */
+  .hamburger--open .hamburgerBar:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+  .hamburger--open .hamburgerBar:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger--open .hamburgerBar:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+
+  /* Sets the navigation to hidden and vertical */
+  .nav {
+    position: fixed;
+    top: 80px;
+    left: 0px;
+    background-color: var(--Main_Color);
+    border-bottom: 5px solid var(--Secondary_Color);
+    width: 100%;
+    padding: 10px 0 10px;
+    visibility: hidden;
+    opacity: 0%;
+  }
+  .navList {
+    flex-direction: column;
+    align-items: center;
+    row-gap: 10px;
+    margin: 0;
+  }
+
+  /* Shows the hamburger icon. */
+  .hamburger {
+    display: block;
   }
 }
 
@@ -207,10 +269,6 @@ footer {
 
   .card {
     padding: 10px;
-  }
-
-  .card:first-child {
-    padding: 10px 30px;
   }
 
   .card h3 {

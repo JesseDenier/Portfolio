@@ -207,6 +207,7 @@ footer {
   padding: 20px;
   font-weight: bolder;
   text-shadow: 1px 1px 1px white;
+  border-top: 5px solid var(--Main_Color);
 }
 
 /* Solves the navigation menu hitting the title on small devices. */

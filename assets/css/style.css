@@ -4,6 +4,26 @@
   --Secondary_Color: rgb(5, 178, 1);
 }
 
+/*! CHAT GPT*/
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999; /* Ensure the modal is on top of other elements */
+}
+
+.modal img {
+  max-width: 90%; /* Adjust as needed */
+  max-height: 90%; /* Adjust as needed */
+}
+/*! CHAT GPT*/
+
 /* Sets standards and adjusts hashtag links to work with fixed header. */
 * {
   box-sizing: border-box;
@@ -92,11 +112,6 @@ nav a {
   width: 100%;
 }
 
-/* Prevents the About Me image from expanding on hover. */
-.About .Section_Content_Images img:hover {
-  transform: none;
-}
-
 /* Creates a centered flexbox for holding tiled content. */
 .Section_Content_Tiles {
   width: 100%;
@@ -146,12 +161,7 @@ nav a {
   max-width: 240px;
   max-height: 240px;
   margin: 20px;
-}
-
-/* Allows images within flexbox to expand on hover. */
-/* To grader or others: Please contact me if you know how to keep image within viewport. */
-.Section_Content_Images img:hover {
-  transform: scale(2.5);
+  cursor: pointer; /* Add cursor pointer to indicate clickable */
 }
 
 /* Creates a green footer similar to the header. */

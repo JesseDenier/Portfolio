@@ -10,17 +10,18 @@
       rel="stylesheet"
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
 
-  <body>
+  <body class="mt-16">
     <!-- HEADER -->
     <header class="header">
-      <div class="headerContent">
+      <div class="flex items-center justify-between px-3 h-16">
         <div class="logo">
           <a href="#about">
             <img
               class="logoImage"
-              src="assets/images/personal_logo.png"
+              src="assets/images/logo_personal.png"
               alt="Personal Logo"
             />
           </a>
@@ -57,6 +58,7 @@
         </div>
       </div>
     </header>
+    <div></div>
 
     <!-- About Me -->
     <section id="about">
@@ -615,14 +617,36 @@
     </section>
 
     <!-- Footer -->
-    <a
-      href="https://docs.google.com/forms/d/1ah8J7eFFF-EQZqtnIc9Tg0m-IIgvsfn5DAYGSwzw9SU/edit"
-      target="_blank"
-    >
-      <footer id="contact">
-        <p>CLICK THIS FOOTER TO CONTACT ME</p>
-      </footer>
-    </a>
+
+    <footer id="contact" class="flex items-center justify-center">
+      <a
+        href="https://www.linkedin.com/in/jesse-denier-25269057/"
+        target="_blank"
+      >
+        <img
+          class="w-7"
+          src="assets/images/logo_linkedin.png"
+          alt="LinkedIn logo"
+        />
+      </a>
+
+      <a
+        href="https://docs.google.com/forms/d/1ah8J7eFFF-EQZqtnIc9Tg0m-IIgvsfn5DAYGSwzw9SU/edit"
+        target="_blank"
+        class="text-center mx-4"
+      >
+        <p>CLICK TO CONTACT ME</p>
+      </a>
+
+      <a href="https://github.com/JesseDenier/Tech-Blog" target="_blank">
+        <img
+          class="w-7"
+          src="assets/images/logo_github.png"
+          alt="GitHub logo"
+        />
+      </a>
+    </footer>
+
     <script src="assets/js/script.js"></script>
   </body>
 </html>
